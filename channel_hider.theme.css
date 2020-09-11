@@ -1,0 +1,33 @@
+/**
+ * @name sidebar hider
+ * @author autistic boy#0317
+ * @version 1.0
+ * @description hides channel list and member list until you hover or click on them
+*/
+
+:root {
+    --speed-channels: .4s;
+    --speed-users: .3s;
+    --size-channels-open: 240px; /*default is 240*/
+    --size-channels-closed: 15px; /*set to 0 if you want channel list completely hidden 50*/
+    --size-userlist-closed: 55px; /*don't set to 0*/
+}
+
+/*hide/show user list*/
+.da-membersWrap { transform: translateX(calc(240px - var(--size-userlist-closed))); margin-left:calc(-240px + var(--size-userlist-closed)); transition:all var(--speed-users)}
+.da-membersWrap:hover {transform: translateX(0px); transition:all var(--speed-users)}
+
+/* hide/show channel list */
+.sidebar-2K8pFh {width: var(--size-channels-closed); transition: var(--speed-channels)}
+.wrapper-1Rf91z:hover ~ div .sidebar-2K8pFh, .sidebar-2K8pFh:hover {width: var(--size-channels-open)}
+
+/*moves text area and channel name*/
+.wrapper-1Rf91z:hover ~ div .chatContent-a9vAAp, .sidebar-2K8pFh:hover ~ div .chatContent-a9vAAp {margin-left:calc(-1 * var(--size-channels-open) + var(--size-channels-closed)); transition:margin-left var(--speed-channels);}
+.wrapper-1Rf91z:hover ~ div .children-19S4PO, .sidebar-2K8pFh:hover ~ div .children-19S4PO {margin-left:calc(-1 * var(--size-channels-open) + var(--size-channels-closed)); transition:margin-left var(--speed-channels);}
+.children-19S4PO, .chatContent-a9vAAp {margin-left:0px; transition:margin-left var(--speed-channels)}
+
+/*delete this if you only want to show sidbars when hovering*/
+.wrapper-1Rf91z:focus-within ~ div .sidebar-2K8pFh, .sidebar-2K8pFh:focus-within {width: var(--size-channels-open)}
+.wrapper-1Rf91z:focus-within ~ div .chatContent-a9vAAp, .sidebar-2K8pFh:focus-within ~ div .chatContent-a9vAAp {margin-left:calc(-1 * var(--size-channels-open) + var(--size-channels-closed)); transition:margin-left var(--speed-channels);}
+.wrapper-1Rf91z:focus-within ~ div .children-19S4PO, .sidebar-2K8pFh:focus-within ~ div .children-19S4PO {margin-left:calc(-1 * var(--size-channels-open) + var(--size-channels-closed)); transition:margin-left var(--speed-channels);}
+.da-membersWrap:focus-within {transform: translateX(0px); transition:all var(--speed-users)}

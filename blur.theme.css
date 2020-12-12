@@ -1,0 +1,22 @@
+/**
+ * @name blur discord
+ * @author autistic boy#0317
+ * @version 1.1
+ * @description blurs entire discord window unless the mouse is over it
+*/
+
+/* v1.1 changelog
+--added some settings
+*/
+
+:root {
+    --blur-delay: .5s;
+    --blur-amount: 10px;
+    --blur-speed: .6s;
+}
+
+.appMount-3lHmkl {filter:blur(var(--blur-amount)); transition: var(--blur-speed); transition-delay:var(--blur-delay)}
+.appMount-3lHmkl:hover {filter:blur(0px); transition: var(--blur-speed)}
+
+/*keeps dicord un blurred until you click away*/
+.appMount-3lHmkl:focus-within {filter:blur(0px); transition: var(--blur-speed)}

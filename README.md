@@ -1,4 +1,4 @@
-hides user list and channel list untill you hover over or click on them.
+hides user list and channel list untill you hover over them.
 you can adjust the size and transition speeds in the theme file
 
 minimized

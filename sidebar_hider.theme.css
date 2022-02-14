@@ -1,7 +1,7 @@
 /**
  * @name sidebar hider
- * @author i fixed my name pls don't ban me#0317
- * @version 2.0
+ * @author idk-yeah#0317
+ * @version 2.1
  * @description hides channel list and member list until you hover on them
 */
 
@@ -14,15 +14,15 @@
 }
 
 /*hide/show user list*/
-.membersWrap-2h-GB4 { transform: translateX(calc(240px - var(--size-userlist-closed))); margin-left:calc(-240px + var(--size-userlist-closed)); transition:all var(--speed-users)}
-.membersWrap-2h-GB4:hover {transform: translateX(0px); transition:all var(--speed-users)}
+.container-2o3qEW { transform: translateX(calc(240px - var(--size-userlist-closed))); margin-left:calc(-240px + var(--size-userlist-closed)); transition:all var(--speed-users)}
+.container-2o3qEW:hover {transform: translateX(0px); transition:all var(--speed-users)}
 
 /* hide/show channel list */
-.sidebar-2K8pFh {width: var(--size-channels-closed); transition: var(--speed-channels)}
-.wrapper-3NnKdC:hover ~ div .sidebar-2K8pFh, .sidebar-2K8pFh:hover {width: var(--size-channels-open)}
-.nowPlayingColumn-2sl4cE {display: none}
+.sidebar-1tnWFu {width: var(--size-channels-closed); transition: var(--speed-channels)}
+.wrapper-1_HaEi:hover ~ div .sidebar-1tnWFu, .sidebar-1tnWFu:hover {width: var(--size-channels-open)}
 
 /*moves text area and channel name */
-.wrapper-3NnKdC:hover ~ div .content-yTz4x3, .sidebar-2K8pFh:hover ~ div .content-yTz4x3 {margin-left:calc(-1 * var(--size-channels-open) + var(--size-channels-closed)); transition:margin-left var(--speed-channels);}
-.wrapper-3NnKdC:hover ~ div .children-19S4PO, .sidebar-2K8pFh:hover ~ div .children-19S4PO {margin-left:calc(-1 * var(--size-channels-open) + var(--size-channels-closed)); transition:margin-left var(--speed-channels);}
-.children-19S4PO, .content-yTz4x3 {margin-left:0px; transition:margin-left var(--speed-channels)}
+.wrapper-1_HaEi:hover ~ div .content-1jQy2l, .sidebar-1tnWFu:hover ~ div .content-1jQy2l {margin-left:calc(-1 * var(--size-channels-open) + var(--size-channels-closed)); transition:margin-left var(--speed-channels);}
+.wrapper-1_HaEi:hover ~ div .children-3xh0VB, .sidebar-1tnWFu:hover ~ div .children-3xh0VB {margin-left:calc(-1 * var(--size-channels-open) + var(--size-channels-closed)); transition:margin-left var(--speed-channels);}
+.children-3xh0VB, .content-1jQy2l, .tabBody-2dgbAs {margin-left:0px; transition:margin-left var(--speed-channels)}
+.wrapper-1_HaEi:hover ~ div .tabBody-2dgbAs, .sidebar-1tnWFu:hover ~ div .tabBody-2dgbAs {margin-left:calc(-1 * var(--size-channels-open) + var(--size-channels-closed)); transition:margin-left var(--speed-channels);}
